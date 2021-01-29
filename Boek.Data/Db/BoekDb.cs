@@ -21,7 +21,7 @@ namespace Boek.Data.Db {
     public DbSet<DbImage> DbImages { get; set; }
     public string DataPath {
       get {
-        string dir = @$"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData).TrimEnd('\\')}\BoekDb";
+        string dir = @$"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData).TrimEnd('\\')}\Databases";
         if (!Directory.Exists(dir)) { Directory.CreateDirectory(dir); }
         return $@"{dir}\{DataFile}";
       }
